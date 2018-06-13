@@ -16,9 +16,7 @@ $( document ).ready(function() {
                 done: true,
             },
             success: function(data) {
-                $.get('/todo/get-todos/', function(data){
-                    $('#todos').html(data);
-                })
+                $('#todos').html('').load('/todo/get-todos/');
             },
         });
     });
@@ -30,9 +28,7 @@ $( document ).ready(function() {
                 done: false,
             },
             success: function(data) {
-                $.get('/todo/get-todos/', function(data){
-                    $('#todos').html(data);
-                })
+                $('#todos').html('').load('/todo/get-todos/');
             },
         });
     });
