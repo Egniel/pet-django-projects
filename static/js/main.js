@@ -6,7 +6,13 @@ $( document ).ready(function() {
         },
         mouseleave: function(){
             $(this).removeClass('active');
-        }
+        },
+        touchstart: function(){
+            $(this).addClass('active');
+        },
+        touchend: function(){
+            $(this).removeClass('active');
+        },
     }, '.list-group-item')
     $(document).on('click', '.btn-outline-success', function(event){
         $.ajax({
