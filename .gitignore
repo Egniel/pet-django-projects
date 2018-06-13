@@ -2,3 +2,6 @@
 .vscode
 *.sqlite3
 *_local.py
+__pycache__/
+*.py[cod]
+*$py.class
