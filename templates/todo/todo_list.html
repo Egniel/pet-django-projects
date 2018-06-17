@@ -1,0 +1,23 @@
+{% load static %}
+{% if todos %}
+<ul class="list-group">
+  {% for todo in todos %}
+    <li class="list-group-item d-flex justify-content-between align-items-center">
+      {% if todo.done %}
+      <s>{{ todo.text }}</s>
+      <div class="text-center">
+        <button class="btn btn-outline-primary" data-pk="{{ todo.pk }}">Mark as undone</button>
+        <button class="btn btn-outline-warning" data-pk="{{ todo.pk }}">Delete</button>
+      </div>
+      {% else %}
+      {{ todo.text }}
+      <button class="btn btn-outline-success" data-pk="{{ todo.pk }}">Mark as done</button>
+      {% endif %}
+    </li>
+  {% endfor %}
+</ul>
+{% else %}
+<div class="text-center">
+  <h2>no todos</h2>
+</div>
+{% endif %}
