@@ -1,26 +1,21 @@
 <template>
-  <div>
-    <input v-model="todoText" type="text" placeholder="Text" v />
-    <button @click="$emit('addTodo')">add todo</button>
+  <div class="form-group">
+    <label for="addTodo" class="control-label">Add todo</label>
+    <input
+      :value="value"
+      v-on:input="$emit('input', $event.target.value)"
+      v-on:keyup.enter="$emit('add-todo')"
+      class="form-control"
+      type="text"
+      id='addTodo'
+    />
   </div>
 </template>
 
 <script>
 export default {
-  data() {
-    return {
-      todoText: '',
-    };
-  },
-  methods: {
-    addTodo() {
-      console.log(this.todos);
-      if (this.todoText.length !== 0) {
-        this.todos.push({
-          text: this.todoText,
-        });
-      }
-    },
+  props: {
+    value: String,
   },
 };
 </script>

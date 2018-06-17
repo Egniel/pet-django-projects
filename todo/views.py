@@ -16,3 +16,7 @@ def get_todos(request):
     if request.method == 'GET':
         todos = Todo.objects.all()
         return render(request, 'todo/todo_list.html', {'todos': todos})
+
+
+class TodosVueListView(TemplateView):
+    template_name = "todo_vue.html"
