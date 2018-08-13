@@ -1,6 +1,6 @@
 <template>
   <div class="form-group">
-    <label for="addTodo" class="control-label">Add todo</label>
+    <label for="addTodo" class="control-label">{{ inputText }}</label>
     <input
       :value="value"
       v-on:input="$emit('input', $event.target.value)"
@@ -16,6 +16,7 @@
 export default {
   props: {
     value: String,
+    inputText: String,
   },
 };
 </script>

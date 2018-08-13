@@ -1,6 +1,9 @@
 <template>
   <div class="container">
-      <BaseInput v-model="inputTodo" @add-todo="addTodo()" ></BaseInput>
+      <BaseInput
+      v-model="inputTodo"
+      v-bind="{inputText:'Add todo'}"
+      @add-todo="addTodo()" ></BaseInput>
       <ul class="list-group">
         <TodoItem
           v-for="todo in todos"
