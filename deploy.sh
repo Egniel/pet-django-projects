@@ -3,7 +3,7 @@ cd frontend && npm run build && cd ..
 echo 'Done...Running npm build'
 
 echo 'Copy vue index.html to templates and rename it to todo_vue.html'
-mv 'frontend/index.html' 'templates/todo_vue.html'
+mv 'frontend/dist/index.html' 'templates/todo_vue.html'
 echo 'Done...Copy index.html'
 
 echo 'Collect static'
