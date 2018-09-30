@@ -6,11 +6,12 @@
 
 <script>
 import IndexPage from '@/components/IndexPage';
+
 export default {
-    components: {
-        IndexPage
-    }
-}
+  components: {
+    IndexPage,
+  },
+};
 </script>
 
 <style>
