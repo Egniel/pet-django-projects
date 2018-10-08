@@ -9,7 +9,6 @@
         align-v="center"
         >
         <div class="test-div ">
-            1 of 3
         </div>
         </b-col>
     </b-row>
@@ -214,12 +213,13 @@ canvas {
     margin-bottom: auto;
 }
 .test-div {
-    /* display: block; */
-    background: rgba(255, 255
-    , 255, 0.5);
-    height: 50vh;
-    border-radius: 8px;
-    /* filter: blur(10px); */
-    /* -webkit-filter: blur(10px); */
+  font-size: 2em;
+  /* display: block; */
+  background: rgba(255, 255
+  , 255, 0.5);
+  height: 50vh;
+  border-radius: 8px;
+  /* filter: blur(10px); */
+  /* -webkit-filter: blur(10px); */
 }
 </style>

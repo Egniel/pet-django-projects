@@ -11,9 +11,9 @@ python manage.py collectstatic --noinput
 echo 'Done...Collect static'
 
 echo 'Restart gunicorn'
-systemctl restart gunicorn
+sudo systemctl restart gunicorn
 echo 'Done...Restart gunicorn'
 
 echo 'Restart nginx'
-nginx -t && systemctl restart nginx
+sudo nginx -t && sudo systemctl restart nginx
 echo 'Done...Restart nginx'
