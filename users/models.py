@@ -71,20 +71,21 @@ class User(AbstractUser):
         return f'{self.first_name} {self.last_name} ({self.pk})'
 
 
-class JobSeeker(User):
+class Resume(models.Model):
+    user = models.ForeignKey('User', on_delete='SET_NULL')
     education = models.ManyToManyField(
-        'Education', related_name='seekers')
+        'Education', related_name='seekers', **NULL)
     work_experience = models.ManyToManyField(
-        'Company', related_name='seekers')
+        'Company', related_name='seekers', **NULL)
     skills = models.ManyToManyField(
-        'Skill', related_name='seekers')
+        'Skill', related_name='seekers', **NULL)
     personal_qualities = models.ManyToManyField(
-        'Quality', related_name='seekers')
+        'Quality', related_name='seekers', **NULL)
     additional_qualification = models.ManyToManyField(
-        'Qualification', related_name='seekers')
-    additional_info = models.TextField()
+        'Qualification', related_name='seekers', **NULL)
+    additional_info = models.TextField(**NULL)
 
     def __str__(self):
-        return f'{self.first_name} {self.last_name} ({self.pk})'
+        return f'{self.user.first_name} {self.user.last_name} ({self.pk})'
 
 
