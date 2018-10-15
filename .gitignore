@@ -1,4 +1,6 @@
 .venv
+/.venv/
+.venv2
 .vscode
 *.sqlite3
 *_local.py

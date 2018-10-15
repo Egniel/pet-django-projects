@@ -11,11 +11,18 @@ export default {
 </script>
 
 <style>
-  @import 'assets/bootstrap-theme.css';
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+body {
+   margin: 0;
+   padding: 0;
+   /* font: normal 75% Arial, Helvetica, sans-serif; */
+   font-family: 'Roboto', sans-serif;
+}
 
 #app {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  margin-top: 4em;
-}
+  height: 100vh;
+  overflow: hidden;
+ }
 </style>
